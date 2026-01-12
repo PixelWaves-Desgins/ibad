@@ -508,6 +508,55 @@ nav a:hover::before {
     .project-image {
         height: 200px;
     }}
+
+/* Animated Background Text */
+.background-text-container {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background-text {
+    display: inline-block;
+    font-size: 12rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    animation: scrollText 25s linear infinite;
+    letter-spacing: 2rem;
+    padding-right: 5rem;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .background-text {
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-text {
+        font-size: 4rem;
+        letter-spacing: 0.5rem;
+        padding-right: 2rem;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -526,6 +575,11 @@ nav a:hover::before {
 
     <canvas id="gradient-canvas"></canvas>
     <canvas id="stars-canvas"></canvas>
+    <div class="background-text-container">
+    <div class="background-text">
+        PIXELWAVES DESIGNS PIXELWAVES DESIGNS PIXELWAVES DESIGNS PIXELWAVES DESIGNS PIXELWAVES DESIGNS PIXELWAVES DESIGNS
+    </div>
+</div>
     
     <header id="header">
         <nav>
