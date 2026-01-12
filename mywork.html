@@ -129,7 +129,7 @@
             background: linear-gradient(135deg, rgba(54, 54, 54, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
             backdrop-filter: blur(10px);
             color: #000000;
-            padding: 1rem 0;
+            padding:0.75srem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -172,6 +172,7 @@
             position: relative;
             transition: all 0.3s ease;
             overflow: hidden;
+            display: block;
         }
 
         nav a::before {
@@ -398,71 +399,71 @@
         }
 
         .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 1100;
-}
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1100;
+        }
 
-.hamburger span {
-    width: 28px;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
 
-/* Mobile Navbar */
-@media (max-width: 768px) {
+        /* Mobile Navbar */
+        @media (max-width: 768px) {
 
-    .hamburger {
-        display: flex;
-    }
+            .hamburger {
+                display: flex;
+            }
 
-    nav ul {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 260px;
-        height: calc(100vh - 70px);
-        background: rgba(0,0,0,0.95);
-        backdrop-filter: blur(12px);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 2rem;
-        gap: 1.5rem;
-        transition: right 0.35s ease;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.6);
-    }
+            nav ul {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 260px;
+                height: calc(100vh - 70px);
+                background: rgba(0,0,0,0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: right 0.35s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.6);
+            }
 
-    nav ul.active {
-        right: 0;
-    }
+            nav ul.active {
+                right: 0;
+            }
 
-    nav ul li {
-        width: 100%;
-    }
+            nav ul li {
+                width: 100%;
+            }
 
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 0.8rem 0;
-        font-size: 1.05rem;
-    }
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 0.8rem 0;
+                font-size: 1.05rem;
+            }
 
-    .page-header h1 {
-        font-size: 2.2rem;
-    }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
 
-    .container {
-        padding: 2rem 1.2rem 4rem;
-    }
+            .container {
+                padding: 2rem 1.2rem 4rem;
+            }
 
-    .project-image {
-        height: 200px;
-    }
-}
+            .project-image {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -486,10 +487,10 @@
         <nav>
             <a href="index.html" class="logo">Ibad Ur Rehman</a>
             <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
