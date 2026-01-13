@@ -129,7 +129,7 @@
             background: linear-gradient(135deg, rgba(54, 54, 54, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
             backdrop-filter: blur(10px);
             color: #000000;
-            padding:0.75srem 0;
+            padding:1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -152,11 +152,54 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-        }
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    animation: logoFadeIn 1s ease-in-out;
+}
+
+.logo-img {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: white;
+    padding: 0.25rem;
+    box-shadow: 0 4px 15px rgba(134, 244, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 25px rgba(134, 244, 0, 0.7);
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 48px;
+        width: 48px;
+        padding: 0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 42px;
+        width: 42px;
+        padding: 0.2rem;
+    }
+}
 
         nav ul {
             list-style: none;
@@ -538,8 +581,10 @@
 </div>
     
     <header id="header">
-        <nav>
-            <a href="index.html" class="logo">Ibad Ur Rehman</a>
+    <nav>
+        <div class="logo">
+            <img src="https://i.postimg.cc/jSVRnq0q/Pixel-Waves-Design-2.png" alt="PixelWaves Design" class="logo-img">
+        </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
